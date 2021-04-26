@@ -37,6 +37,7 @@ func GetIdsFromCacheKey(keys []Key) []int64 {
 
 func GetItemFromDB(ctx context.Context, keys []Key) map[Key]Value {
 	// value 必须是string
+	fmt.Println("GetItemFromDB!!")
 	infos := map[Key]Value{}
 	for _, k := range keys {
 		if v, ok := myDB[k]; ok {

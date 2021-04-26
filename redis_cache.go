@@ -34,7 +34,7 @@ func (r *RedisCache) Get(ctx context.Context, key Key) (Value, bool) {
 	result := r.redis.Get(key.String())
 	if err := result.Err(); err != nil {
 		if errors.Is(err, redis.Nil) {
-			fmt.Printf("redis cache key=%v pipeline.get error: redis Nil", key)
+			//fmt.Printf("redis cache key=%v pipeline.get error: redis Nil", key)
 		} else {
 			fmt.Printf("redis cache key=%v single.get error: %v", key, err)
 		}
