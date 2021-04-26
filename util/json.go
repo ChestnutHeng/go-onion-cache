@@ -1,4 +1,4 @@
-package tinyutil
+package util
 
 import "encoding/json"
 
